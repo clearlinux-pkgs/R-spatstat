@@ -1,9 +1,9 @@
-1.56.0
+1.56.1
 R-tensor
 R-deldir
-R-polyclip
 R-goftest
-R-abind
 R-RandomFields
-R-spatstat.data
 R-locfit
+R-spatstat.data
+R-polyclip
+R-abind
