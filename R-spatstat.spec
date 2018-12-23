@@ -4,7 +4,7 @@
 #
 Name     : R-spatstat
 Version  : 1.57.1
-Release  : 14
+Release  : 15
 URL      : https://cran.r-project.org/src/contrib/spatstat_1.57-1.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/spatstat_1.57-1.tar.gz
 Summary  : Spatial Point Pattern Analysis, Model-Fitting, Simulation, Tests
