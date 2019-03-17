@@ -4,21 +4,14 @@
 #
 Name     : R-spatstat
 Version  : 1.58.2
-Release  : 18
+Release  : 19
 URL      : https://cran.r-project.org/src/contrib/spatstat_1.58-2.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/spatstat_1.58-2.tar.gz
 Summary  : Spatial Point Pattern Analysis, Model-Fitting, Simulation, Tests
 Group    : Development/Tools
 License  : GPL-2.0+
 Requires: R-spatstat-lib = %{version}-%{release}
-Requires: R-RandomFields
-Requires: R-abind
-Requires: R-deldir
-Requires: R-goftest
-Requires: R-locfit
-Requires: R-polyclip
-Requires: R-spatstat.data
-Requires: R-tensor
+Requires: R-spatstat.utils
 BuildRequires : R-RandomFields
 BuildRequires : R-abind
 BuildRequires : R-deldir
@@ -26,6 +19,7 @@ BuildRequires : R-goftest
 BuildRequires : R-locfit
 BuildRequires : R-polyclip
 BuildRequires : R-spatstat.data
+BuildRequires : R-spatstat.utils
 BuildRequires : R-tensor
 BuildRequires : buildreq-R
 
@@ -53,10 +47,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1547339064
+export SOURCE_DATE_EPOCH=1552850018
 
 %install
-export SOURCE_DATE_EPOCH=1547339064
+export SOURCE_DATE_EPOCH=1552850018
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -92,8 +86,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
-R CMD check --no-manual --no-examples --no-codoc -l %{buildroot}/usr/lib64/R/library spatstat|| : 
-cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
+R CMD check --no-manual --no-examples --no-codoc  spatstat || :
 
 
 %files
@@ -151,10 +144,18 @@ cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
 /usr/lib64/R/library/spatstat/help/spatstat.rdx
 /usr/lib64/R/library/spatstat/html/00Index.html
 /usr/lib64/R/library/spatstat/html/R.css
-/usr/lib64/R/library/spatstat/libs/symbols.rds
 /usr/lib64/R/library/spatstat/ratfor/Makefile
 /usr/lib64/R/library/spatstat/ratfor/dppll.r
 /usr/lib64/R/library/spatstat/ratfor/inxypOld.r
+/usr/lib64/R/library/spatstat/tests/badwindow.txt
+/usr/lib64/R/library/spatstat/tests/selfcross.txt
+/usr/lib64/R/library/spatstat/tests/testsAtoD.R
+/usr/lib64/R/library/spatstat/tests/testsEtoF.R
+/usr/lib64/R/library/spatstat/tests/testsGtoK.R
+/usr/lib64/R/library/spatstat/tests/testsLtoM.R
+/usr/lib64/R/library/spatstat/tests/testsNtoP.R
+/usr/lib64/R/library/spatstat/tests/testsQtoR.R
+/usr/lib64/R/library/spatstat/tests/testsStoZ.R
 
 %files lib
 %defattr(-,root,root,-)

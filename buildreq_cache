@@ -6,4 +6,5 @@ R-goftest
 R-locfit
 R-polyclip
 R-spatstat.data
+R-spatstat.utils
 R-tensor
