@@ -4,27 +4,23 @@
 #
 Name     : R-spatstat
 Version  : 1.64.1
-Release  : 37
+Release  : 38
 URL      : https://cran.r-project.org/src/contrib/spatstat_1.64-1.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/spatstat_1.64-1.tar.gz
 Summary  : Spatial Point Pattern Analysis, Model-Fitting, Simulation, Tests
 Group    : Development/Tools
 License  : GPL-2.0+
 Requires: R-spatstat-lib = %{version}-%{release}
-Requires: R-RandomFields
 Requires: R-abind
 Requires: R-deldir
 Requires: R-goftest
-Requires: R-locfit
 Requires: R-polyclip
 Requires: R-spatstat.data
 Requires: R-spatstat.utils
 Requires: R-tensor
-BuildRequires : R-RandomFields
 BuildRequires : R-abind
 BuildRequires : R-deldir
 BuildRequires : R-goftest
-BuildRequires : R-locfit
 BuildRequires : R-polyclip
 BuildRequires : R-spatstat.data
 BuildRequires : R-spatstat.utils
@@ -56,10 +52,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1589310277
+export SOURCE_DATE_EPOCH=1589588706
 
 %install
-export SOURCE_DATE_EPOCH=1589310277
+export SOURCE_DATE_EPOCH=1589588706
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
