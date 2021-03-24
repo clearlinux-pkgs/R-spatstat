@@ -4,14 +4,16 @@
 #
 Name     : R-spatstat
 Version  : 2.0.1
-Release  : 41
+Release  : 42
 URL      : https://cran.r-project.org/src/contrib/spatstat_2.0-1.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/spatstat_2.0-1.tar.gz
 Summary  : Spatial Point Pattern Analysis, Model-Fitting, Simulation, Tests
 Group    : Development/Tools
 License  : GPL-2.0+
+Requires: R-spatstat.core
 Requires: R-spatstat.data
 Requires: R-spatstat.geom
+Requires: R-spatstat.linnet
 Requires: R-spatstat.utils
 BuildRequires : R-spatstat.core
 BuildRequires : R-spatstat.data
@@ -37,10 +39,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1616545088
+export SOURCE_DATE_EPOCH=1616545460
 
 %install
-export SOURCE_DATE_EPOCH=1616545088
+export SOURCE_DATE_EPOCH=1616545460
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
