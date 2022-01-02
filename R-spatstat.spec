@@ -4,7 +4,7 @@
 #
 Name     : R-spatstat
 Version  : 2.3.0
-Release  : 55
+Release  : 56
 URL      : https://cran.r-project.org/src/contrib/spatstat_2.3-0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/spatstat_2.3-0.tar.gz
 Summary  : Spatial Point Pattern Analysis, Model-Fitting, Simulation, Tests
@@ -39,10 +39,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1639424968
+export SOURCE_DATE_EPOCH=1641127500
 
 %install
-export SOURCE_DATE_EPOCH=1639424968
+export SOURCE_DATE_EPOCH=1641127500
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
