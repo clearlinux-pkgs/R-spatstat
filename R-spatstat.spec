@@ -4,7 +4,7 @@
 #
 Name     : R-spatstat
 Version  : 3.0.3
-Release  : 65
+Release  : 66
 URL      : https://cran.r-project.org/src/contrib/spatstat_3.0-3.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/spatstat_3.0-3.tar.gz
 Summary  : Spatial Point Pattern Analysis, Model-Fitting, Simulation, Tests
@@ -25,9 +25,6 @@ BuildRequires : R-spatstat.model
 BuildRequires : R-spatstat.random
 BuildRequires : R-spatstat.utils
 BuildRequires : buildreq-R
-# Suppress stripping binaries
-%define __strip /bin/true
-%define debug_package %{nil}
 
 %description
 Contains over 2000 functions for plotting spatial data, exploratory data analysis, model-fitting, simulation, spatial sampling, model diagnostics, and formal inference. 
@@ -46,10 +43,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1674946300
+export SOURCE_DATE_EPOCH=1678832469
 
 %install
-export SOURCE_DATE_EPOCH=1674946300
+export SOURCE_DATE_EPOCH=1678832469
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
