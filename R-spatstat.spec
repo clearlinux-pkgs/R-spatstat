@@ -7,7 +7,7 @@
 #
 Name     : R-spatstat
 Version  : 3.2.1
-Release  : 77
+Release  : 78
 URL      : https://cran.r-project.org/src/contrib/spatstat_3.2-1.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/spatstat_3.2-1.tar.gz
 Summary  : Spatial Point Pattern Analysis, Model-Fitting, Simulation, Tests
